@@ -50,6 +50,8 @@ function create(){
         url: "http://localhost:8080/api/customers",
         success: function (){
             showAllClass();
+            deleteForm()
+            deleButton()
         }
     })
 }
@@ -89,7 +91,16 @@ function edit(id){
         success: function (){
             console.log(id)
             showAllClass();
+            deleteForm()
+            deleButton()
         }
     })
-$
+}
+function deleteForm(){
+    document.getElementById("first_name").value=""
+    let b=document.getElementById("last_name")
+    b.value=""
+}
+function deleButton(){
+    document.getElementById("edit").innerHTML=""
 }
